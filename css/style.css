@@ -24,7 +24,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  /* margin: 1rem; */
+}
+
+main {
   margin: 1rem;
+  max-width: 500px;
+  width: 100%;
 }
 
 .card {
@@ -73,5 +79,88 @@ body {
 
   & figure {
     background-color: #fff;
+
+    & h1 {
+      margin-bottom: 4rem;
+      text-align: left;
+      color: var(--dark-brown);
+      font-size: 1.8rem;
+    }
+
+    & div {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    & article {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      & .col {
+        height: 100px;
+        width: 40px;
+        background-color: var(--soft-red);
+        border-radius: 5px;
+        margin-bottom: 0.4rem;
+
+        display: flex;
+      }
+
+      & p {
+        font-size: 1rem;
+        color: var(--dark-brown);
+        margin-bottom: 2rem;
+      }
+
+      /* &:nth-child(2) .col {
+        height: 200px;
+      } */
+    }
+
+    & footer {
+      border-top: 2px solid var(--cream);
+      padding-top: 2rem;
+
+      display: flex;
+      justify-content: space-between;
+
+      & div {
+        display: flex;
+        flex-direction: column;
+
+        &:first-child {
+          & span {
+            font-size: 3rem;
+            font-weight: 700;
+          }
+
+          & p {
+            text-align: left;
+            width: 100%;
+          }
+        }
+
+        &:nth-child(2) {
+          & span {
+            font-weight: 700;
+            text-align: right;
+            width: 100%;
+          }
+          align-items: center;
+          justify-content: center;
+        }
+
+        & span {
+          color: var(--dark-brown);
+        }
+
+        & p {
+          color: var(--medium-brown);
+        }
+      }
+    }
   }
 }
