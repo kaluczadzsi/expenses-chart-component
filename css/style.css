@@ -100,13 +100,38 @@ main {
       align-items: center;
 
       & .col {
+        position: relative;
         height: 100px;
         width: 40px;
         background-color: var(--soft-red);
         border-radius: 5px;
         margin-bottom: 0.4rem;
-
+        cursor: pointer;
         display: flex;
+        transition: ease-in 0.2s;
+
+        &.active::after {
+          position: absolute;
+          content: '$15';
+          border-radius: 5px;
+          width: 30px;
+          text-align: center;
+          top: 0;
+          left: 0;
+          transform: translateY(-40px);
+          background-color: var(--dark-brown);
+          color: #fff;
+          padding: 5px;
+          font-size: 16px;
+        }
+
+        &.active::changed-after::after {
+          content: 'test';
+        }
+
+        &:hover {
+          background-color: rgba(236, 119, 95, 0.6);
+        }
       }
 
       & p {
